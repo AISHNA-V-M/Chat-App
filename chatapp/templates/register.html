@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <form action="" method="post" onsubmit="return validate()">
+        <div class="registration">
+            <div class="reg-form">
+                <h1>Register Now!</h1>
+                <div class="name-block">
+                    <div class="first-name">
+                        <input type="text" name="firstname" placeholder="First Name">
+                    </div>
+                    <div class="last-name">
+                        <input type="text" name="lastname" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="username">
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                <div class="password">
+                    <input type="password"    id="password" name="password" placeholder="Password">
+                </div>
+                <div class="confirm-psd">
+                    <input type="password" onkeyup="active()" name="confirmpassword" id="confirm-password" placeholder="Confirm Password">
+                    <div class="show"><img src="static/images/view.png" alt=""></div>
+                </div>
+
+                <div id="errorText"></div>
+                <div class="registration-btn" >
+                    <input type="submit"  value="Register Now"  >
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>
